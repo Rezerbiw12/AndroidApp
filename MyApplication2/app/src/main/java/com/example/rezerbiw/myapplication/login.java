@@ -23,7 +23,7 @@ import java.time.format.TextStyle;
 public class login extends AppCompatActivity {
 
     LoginButton loginButton;
-    CallbackManager callbackManager
+    CallbackManager callbackManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +46,8 @@ public class login extends AppCompatActivity {
                 });
                 Bundle parameters = new Bundle();
                 parameters.putString("fields","first_name,last_name,emai,id");
-                GraphRequest.setParameters(parameters);
-                GraphRequest.executeBatchAsync();
+                graphRequest.setParameters(parameters);
+                graphRequest.executeAsync();
             }
 
             @Override
